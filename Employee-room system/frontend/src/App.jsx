@@ -10,10 +10,8 @@ const API="http://127.0.0.1:8000";
 
 
 useEffect(()=>{  
-  fetch(API+ "/get_employees").then(res=>res.json()).then(data=> {console.log("Employees:",data);
-    setEmployees(data)});
-  fetch(API + "/get_rooms").then(res=>res.json()).then(data=> {console.log("Rooms:",data);
-     setRooms(data)});
+  fetch(API+ "/get_employees").then(res=>res.json()).then(data=> setEmployees(data));
+  fetch(API + "/get_rooms").then(res=>res.json()).then(data=> setRooms(data));
 },[]);
 
 const addEmployee= async()=>{
